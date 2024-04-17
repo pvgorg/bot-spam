@@ -5,7 +5,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pyrogram import Client, filters, errors
 import time
 
-admin = 5867393902
+admin = 141374540
 api_id = 23136380
 api_hash = '6ae6541159e229499615953de667675c'
 
