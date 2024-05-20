@@ -6,7 +6,7 @@ from pyrogram import Client, filters, errors
 from pathlib import Path
 
 
-admin = 5867393902
+admin = 1502490631
 api_id = 23136380
 api_hash = '6ae6541159e229499615953de667675c'
 
