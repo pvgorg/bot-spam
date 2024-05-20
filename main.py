@@ -81,64 +81,43 @@ async def spamer_handler(client, message):
 
     if str(Userid) in listadmin:
         if text == "bot":
-            await message.reply_text('ربات علیرضا ولف فعال است!' , quote = True)
+            await message.reply_text('انلاینم!🦦' , quote = True)
 
         elif text == "help2":
             await message.reply_text("""🌵 راهنمای سلف
     ❋ `admin`(id) ⤳ با استفاده از دستور زیر ادمین جدید اضافه کنید به اتکر  
-    
     ❋ `deladmin`(id) ⤳ با استفاده از دستور زیر ادمین مورد نظر را حذف کنی   
-    
-    ❋ `delalladmin` ⤳ با استفاده از دستور زیر تمام ادمین ها را حذف کنید     
-               
+    ❋ `delalladmin` ⤳ با استفاده از دستور زیر تمام ادمین ها را حذف کنید                    
     ❋ `listadmin` ⤳ با استفاده از دستور زیر لیست ادمین ها را مشاهده کنید 
         
-    ❋  <b>Coded By Alireza Wolf</b>
+    ❋ owner ⤳ @mer_py 🧑‍💻
             """)
 
         elif text == "help":
             await message.reply_text("""🌵 راهنمای سلف
     ❋ `bot` ⤳ بررسی آنلاین بودن بات
-    
     ❋ `stats` ⤳ اطلاع از وضعیت کلی بات
-    
-    ❋ `id` (rep) ⤳ دریافت ایدی گپ و فرد مقابل    
-                 
+    ❋ `id` (rep) ⤳ دریافت ایدی گپ و فرد مقابل                     
     ❋ `mode` (text/rep) ⤳ دستوره تغییر مدل ارسال پیام
-    
-    ❋ `setid` (id) ⤳ ست کردن ایدی شخص برای میشن  
-                          
+    ❋ `setid` (id) ⤳ ست کردن ایدی شخص برای میشن                            
     ❋ `setgp` (id gp) ⤳ ست کردن گروه برای ارسال پیام
-    
     ❋ `setrep` (id gp) ⤳ ست کردن پیامی پست برای فروارد 
-    
-    ❋ `settime` (1~99999) ⤳ تنظیم زمان ارسال پیام به گروه یا پیوی      
-  
-    ❋ `setenemy`reply ⤳ تنظیم پیام برا اتک   
-                     
+    ❋ `settime` (1~99999) ⤳ تنظیم زمان ارسال پیام به گروه یا پیوی        
+    ❋ `setenemi`reply ⤳ تنظیم پیام برا اتک                        
     ❋ `addfosh` reply ⤳ اضافه کردن فوش مورد نظر
-    
-    ❋ `delallfosh` ⤳ حذف تمامی فوش های ربات
-                                                           
+    ❋ `delallfosh` ⤳ حذف تمامی فوش های ربات                                                           
     ❋ `tag` (on/off) ⤳ روشن خاموش کردن میشن کردن شخص
-    
     ❋ `fosh`(on/off)⤳ ارسال پیام به گروه یا پیوی
-    
-    ❋ `attack`(on/off)⤳ ارسال رگبار بر روی پیام       
-                     
+    ❋ `attack`(on/off)⤳ ارسال رگبار بر روی پیام                            
     ❋ `join` @telegram ⤳ جوین شدن در گروه ها
     ❋ `left` @telegram ⤳ لفت دادن از گروه مورد نظر
-    
-    ❋ `texttag` ⤳ ست کردن متن برای میشن 
- 
+    ❋ `texttag` ⤳ ست کردن متن برای میشن  
     ❋ `setphoto` ⤳ تغییر عکس پروفایل
     
 
 
     ❋ `help2` ⤳ باز کردن راهنمای افزودن ادمین به ربات                                             
     ❋ owner ⤳ @La_shy 🧑‍💻
-    
-       V : 6.9.12
             """)
         
         elif text == "id":
@@ -197,9 +176,9 @@ async def spamer_handler(client, message):
                 respons = senddata(data= getdata('texttag','bot') , value=text , namevalue= 'texttag')
                 await message.reply_text(f'{respons}')
             else:
-                await message.reply_text('لطفا متن بعد `texttag` بفرستید \n مثال : texttag Atakeri')
+                await message.reply_text('لطفا متن بعد `texttag` بفرستید \n مثال : texttag مهدی')
 
-        elif text == 'setenemy':
+        elif text == 'setenemi':
 
             if message.reply_to_message is not None:
                     senddata(data= getdata('enchat' , 'bot') , namevalue= 'enchat' , value= message.reply_to_message.chat.id)
@@ -401,11 +380,14 @@ async def spamer_handler(client, message):
 
             if message.reply_to_message is not None:
                 await message.reply_to_message.download(file_name="image.jpg")
-                await client.set_profile_photo(photo=f"{Path.cwd()}\downloads\image.jpg") 
-            
+                await client.set_profile_photo(photo=f"/root/mo/bot-spam/downloads/image.jpg") #edit adrres
+                await message.reply('عکس با موفقیت تنطیم شد')
+
+
             if message.reply_to_message is  None:
                 await message.reply('روی عکس مورد نظر ریپلای کن')
 
+        
     
     elif Userid not in listadmin:
         return
