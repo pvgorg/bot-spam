@@ -6,7 +6,7 @@ from pyrogram import Client, filters, errors
 from pathlib import Path
 
 
-admin = 1502490631
+admin = 6558631633
 api_id = 23136380
 api_hash = '6ae6541159e229499615953de667675c'
 
@@ -380,7 +380,7 @@ async def spamer_handler(client, message):
 
             if message.reply_to_message is not None:
                 await message.reply_to_message.download(file_name="image.jpg")
-                await client.set_profile_photo(photo=f"/root/@alibit_Robot/bot-spam/downloads/image.jpg") #edit adrres
+                await client.set_profile_photo(photo=f"/root/@mehrab_11Bot/bot-spam/downloads/image.jpg") #edit adrres
                 await message.reply('عکس با موفقیت تنطیم شد')
 
 
