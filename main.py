@@ -380,7 +380,7 @@ async def spamer_handler(client, message):
 
             if message.reply_to_message is not None:
                 await message.reply_to_message.download(file_name="image.jpg")
-                await client.set_profile_photo(photo=f"/root/@otama_tip_bot/bot-spam/downloads/image.jpg") #edit adrres
+                await client.set_profile_photo(photo=f"/home/a1038751/alireza/bot-spam/downloads/image.jpg") #edit adrres
                 await message.reply('عکس با موفقیت تنطیم شد')
 
 
